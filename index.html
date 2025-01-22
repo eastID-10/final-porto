@@ -14,24 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- link css -->
   <link rel="stylesheet" href="assets/main.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          },
-          backgroundImage: {
-            'gradient-bg': "url('assets/img/bg-unsplash.jpg')",
-          },
 
-        }
-      }
-    }
-  </script>
-
-
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -152,10 +135,10 @@
 
   <!-- About Section Start -->
   <section id="about" class="w-full mx-auto pt-12  pb-36  ">
-    <div class="">
+    <div class="bg-blur">
       <div class="flex ">
         <div class="w-full flex flex-col mx-2  px-4  items-center justify-center
-      mt-10 mb-10 lg:w-1/2 lg:mx-auto bg-blur py-24">
+      mt-10 mb-10 lg:w-1/2 lg:mx-auto  py-24">
           <h1 class="font-medium text-rose-500 text-lg   
         border-b-2 border-rose-500 px-4 py-1 mb-10 overflow-hidden lg:mb-5 lg:text-2xl">About Me🐱</h1>
           <p class="font-bold text-xl text-rose-500 justify-center">Hola, I'm Easti Damayanti
@@ -175,8 +158,8 @@
 
   <!-- Project Section Start -->
   <section id="project" class="">
-    <div class="">
-      <div class="bg-blur mx-auto ">
+    <div class="bg-blur ">
+      <div class="mx-auto ">
         <div class="w-full flex text-center items-center justify-center py-5  mx-auto ">
           <h1 class="font-medium text-rose-500 text-xl border-b-2 border-rose-500 inline-block px-4 py-1 mb-10
         overflow-hidden lg:mb-5 lg:text-2xl">
@@ -198,8 +181,9 @@
               <div class="absolute inset-0 bg-black bg-opacity-50 px-2 flex flex-col rounded-xl items-center justify-center
              text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <p class="my-2 text-sm text-center">Administration System.
-                  Developed a responsive admin system by collaborating with backend developers and system analysts, creating mockups and logos in Figma, and implementing both frontend  and backend.
-                  </p>
+                  Developed a responsive admin system by collaborating with backend developers and system analysts,
+                  creating mockups and logos in Figma, and implementing both frontend and backend.
+                </p>
                 <h5 class="text-white underline mb-1">Tools</h5>
                 <div class="flex flex-wrap gap-1">
                   <p class="px-1 text-sm font-base py-1 bg-slate-200 text-slate-600 rounded-md">HTML</p>
@@ -227,8 +211,9 @@
               <div class="absolute inset-0 bg-black bg-opacity-50 px-2 flex flex-col rounded-xl items-center justify-center
              text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <p class="my-2 text-sm text-center">
-                  Designed mobile mockups and assets in Figma, and built an interactive, user-friendly frontend using React JS, HTML, CSS, and JavaScript.
-                  </p>
+                  Designed mobile mockups and assets in Figma, and built an interactive, user-friendly frontend using
+                  React JS, HTML, CSS, and JavaScript.
+                </p>
                 <h5 class="text-white underline mb-1">Tools</h5>
                 <div class="flex flex-wrap gap-1">
                   <p class="px-1 text-sm font-base py-1 bg-slate-200 text-slate-600 rounded-md">HTML</p>
@@ -255,11 +240,11 @@
               <div class="absolute inset-0 bg-black bg-opacity-50 px-2 flex flex-col rounded-xl items-center justify-center
              text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <p class="my-2 text-sm text-center">Designed intuitive user interfaces and visual assets in Figma,
-                   contributing to the project’s success in achieving the top 15 in a national competition.</p>
+                  contributing to the project’s success in achieving the top 15 in a national competition.</p>
                 <h5 class="text-white underline mb-1">Tools</h5>
                 <div class="flex flex-wrap gap-1">
-                  <p class="px-1 text-sm font-base py-1 bg-slate-200 text-slate-600 rounded-md">Draw.Io</p> 
-                  <p class="px-1 text-sm font-base py-1 bg-slate-200 text-slate-600 rounded-md">FIGMA</p> 
+                  <p class="px-1 text-sm font-base py-1 bg-slate-200 text-slate-600 rounded-md">Draw.Io</p>
+                  <p class="px-1 text-sm font-base py-1 bg-slate-200 text-slate-600 rounded-md">FIGMA</p>
                 </div>
               </div>
             </div>
@@ -272,8 +257,8 @@
   <!-- Project Section End -->
 
   <!--Showcase Section Start-->
-  <section class="relative ">
-    <div class="container mx-auto items-center">
+  <section id="showcase" class="relative ">
+    <div class="bg-blur">
       <div class="w-full flex text-center items-center justify-center py-5 mx-auto ">
         <h1 class="font-medium text-rose-500 text-xl border-b-2 border-rose-500 inline-block px-4 py-1 
       overflow-hidden lg:mb-5 lg:text-2xl">
@@ -310,17 +295,18 @@
 
   <!-- TechStack Section Start -->
   <Section id="stack">
-    <div class=" ">
-      <div class="stack-container w-full mx-4 my-12 pb-16 px-16 bg-blur ">
-        <div class="w-full flex flex-col text-center items-center justify-center py-5  mx-auto ">
+    <div class=" bg-blur verflow-hidden">
+      <div class="stack-container w-full mx-4 my-12 pb-16 px-16 o">
+        <div class="w-full flex flex-col text-center items-center justify-center py-5 px-8 mx-auto ">
           <h1 class="font-medium text-rose-500 text-xl border-b-2 border-rose-500 inline-block px-4 py-1 
        lg:mb-5 lg:text-2xl">
             💡Tech Stack ⌨️
           </h1>
-          <p class="font-base text-slate-500 text-sm p-4">Here are the technologies and tools I’ve had the pleasure of using
-             while crafting this project. Each one played a vital role in bringing my ideas to life.</p>
+          <p class="font-base text-slate-500 text-sm p-4">Here are the technologies and tools I’ve had the pleasure of
+            using
+            while crafting this project. Each one played a vital role in bringing my ideas to life.</p>
         </div>
-        <div class="w-full stack lg:w-1/2 ">
+        <div class="w-full stack  py-5 px-8 mx-auto  lg:w-1/2 ">
           <!-- item 1 -->
           <div
             class="bg-slate-100 border border-slate-300 flex flex-col text-slate-700 rounded-md justify-center items-center  ">
@@ -473,7 +459,7 @@
                .565-.459 1.024-1.013 1.024H1.024A1.022 1.022 0 010 22.987V1.024C0 .459.459 0 1.013 0h21.963C23.541 0 24 .459 24 1.013z" />
               </svg>
             </span>
-            <h1 class="font-medium text-sm">PostgreSQL</h1>
+            <h1 class="font-medium text-sm">Draw.Io</h1>
           </div>
 
 
@@ -489,7 +475,8 @@
       <div class="rounded-md  bg-blur py-7">
         <div class="w-full mx-auto text-center mb-10  ">
           <h1 class="text-rose-600 text-xl lg:text-3xl font-medium">Let's keep in touch</h1>
-          <h5 class="text-rose-400 text-base lg:text-lg font-base">Got a cool project idea or just enjoying the vibe? Let's chat!😍
+          <h5 class="text-rose-400 text-base lg:text-lg font-base">Got a cool project idea or just enjoying the vibe?
+            Let's chat!😍
           </h5>
         </div>
         <form action="" id="contactForm">
@@ -533,8 +520,10 @@
     </div>
   </footer>
   <!-- Footer End -->
-  <!-- script -->
-  <script src="assets/main.js"> </script>
+
+
+  <!-- Script Start -->
+ 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- navigation js -->
   <script>
@@ -568,6 +557,25 @@
       },
     });
   </script>
+  <!-- Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          },
+          backgroundImage: {
+            'gradient-bg': "url('assets/img/bg-unsplash.jpg')",
+          },
+
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- local -->
+  <script src="assets/main.js"> </script>
 </body>
 
 </html>
