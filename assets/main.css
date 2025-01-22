@@ -8,15 +8,12 @@ body {
     background-size: contain;
   
   }
-/* bg hero section */
-.hero-bg {
-    
-    
-      width: 100%; /* Full width */
-      
-      background-size: cover; /* Ensures background covers the area */
-      background-repeat: no-repeat; /* Prevents tiling */
-}
+ .split {
+  font-family: "Baloo Thambi 2", serif;
+ }
+ .font-baloo {
+  font-family: "Baloo Thambi 2", serif;
+ }
 /*  */
   .group:hover .group-hover\:opacity-100 {
     opacity: 1;

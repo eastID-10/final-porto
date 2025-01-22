@@ -14,7 +14,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- link css -->
   <link rel="stylesheet" href="assets/main.css">
-
+  <!-- link AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anta&family=Baloo+Thambi+2:wght@400..800&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Passero+One&family=Syncopate:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +40,7 @@
 
         <!-- Menu Links -->
         <div class="hidden md:flex space-x-6 hover:*:bg-rose-50 hover:*:rounded-md hover:*:px-2 hover:*:font-medium">
-          <a href="#home" class="text-gray-50 hover:text-rose-600">Home</a>
+          <a href="#home" class="text-rose-700 font-medium hover:text-rose-600">Home</a>
           <a href="#about" class="text-gray-50 hover:text-rose-600">About</a>
           <a href="#project" class="text-gray-50 hover:text-rose-600">Project</a>
           <a href="#contact" class="text-gray-50 hover:text-rose-600">Contact</a>
@@ -64,89 +71,104 @@
   <!-- Header End-->
 
   <!-- Hero Section Start -->
-  <section id="home" class="w-full">
-    <div class="  bg-[url('assets/img/bg-unsplash.jpg')]">
-      <div class="w-full  text-slate-200 text-3xl   lg:py-2 shadow-lg ">
-        <div class="w-full flex flex-col items-center justify-center">
-          <img src="assets/img/avatar1.png" class="w-1/4 lg:w-24 mt-24 rounded-full bg-rose-500
-          border-2 border-rose-400 ring-2 ring-rose-200" alt="">
-          <h1 class="text-lime-50 mt-10   font-medium text-3xl lg:text-4xl font-poppins">Easti Damayanti
+  <section id="home" class="relative min-h-screen   w-full">
+    <div id="background" class="">
+      <div class="w-full h-screen lg:flex">
+        <div class="w-full  flex  lg:flex-col lg:w-1/3 lg:border-r-2 lg:border-zinc-300 ">
+          <div class="w-full flex flex-col items-center mx-auto">
+            <img src="assets/img/avatar1.png"
+              class="w-1/2 lg:w-24 mt-24 rounded-full bg-rose-500 border-2 border-rose-400 ring-2 ring-rose-200"
+              alt="Avatar">
+            <h1 id="" class="text-rose-600 text-center font-medium text-xl lg:text-4xl font-baloo">
+               Easti Damayanti
+            </h1>
+            <p  class="font-medium text-sm text-center  text-rose-600 mb-5 font-baloo">
+              A <span id="author" class="text-zinc-700"></span>
+            </p>
+          </div>
+          <div class="w-1/3 mt-24 md:flex md:w-full md:mx-auto md:mt-10 md:items-center md:justify-center ">
+            <a href="assets/CV Easti Damayanti.pdf" target="_blank" download="Cv Easti Damayanti.pdf">
+              <button type="button" id="resume"
+                class="text-rose-100 mb-2 p-1 mx-2 text-sm font-medium bg-rose-600 text-rose-100 ring-5 ring-rose-300 border-4 border-rose-300 rounded-full  hover:text-white hover:bg-rose-700 hover:text-rose-100 hover:ring-5 hover:ring-rose-300 hover:border-4 hover:border-rose-300 ">
+                CV
+              </button>
+            </a>
+            <a href="https://www.instagram.com/easti____/" target="_blank">
+              <svg role="img" fill="#d6336c" width="25" class=" my-3 mx-2" height="25" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 
+                   2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+              </svg>
+            </a>
+            <a href="https://github.com/eastID-10" target="_blank">
+              <svg role="img" fill="#d6336c" class=" my-3 mx-2" width="25" height="25" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805
+       5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
 
-          </h1>
+            </a>
+            <a href="https://www.linkedin.com/in/easti-damayanti-510913261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class=" my-3 mx-2" fill="#d6336c" x="0px" y="0px" width="25"
+                height="25" viewBox="0 0 50 50">
+                <title>LinkedIn</title>
+                <path
+                  d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                </path>
+              </svg>
 
-          <!-- <h1 class="text-slate-200 mt-2 font-medium text-xl font-poppins">A Frontend Developer</h1> -->
-          <h5
-            class="mx-4 my-2 p-2 text-violet-50 mt-10 mb-2  font-medium text-sm lg:w-1/2 lg:mx-auto lg:mt-3 lg:px-10 lg:text-xl text-center ">
-            With strong foundation in Software Engineering Major, and passionate designer from scratch to develop the
-            design.
-            Using Figma, CSS, HTML, Javascript.
-          </h5>
-          <span class="mt-2 ">
-            <svg class="stroke-2" xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20"
-              viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-            </svg>
-          </span>
-          <a href="assets/CV Easti Damayanti.pdf" target="_blank" download="Cv Easti Damayanti.pdf">
-            <button type="button" id="resume"
-              class="text-rose-700 mt-2 px-4 py-2 text-sm font-medium rounded-full bg-rose-200  border border-slate-300 hover:text-white hover:bg-rose-700 hover:text-rose-100 hover:ring-5 hover:ring-rose-300 hover:border-4 hover:border-rose-300 lg:mb-12">
-              My Resume
-            </button>
-          </a>
+            </a>
+          </div>
         </div>
-        <div class="w-full gap-2  flex items-center justify-center mx-auto py-5 lg:-mt-10 lg:mb-10">
-          <a href="https://www.instagram.com/easti____/" target="_blank"
-            class="bg-rose-100 p-1 rounded-full border border-rose-300 hover:ring hover:ring-rose-400 hover:bg-slate-100">
-            <svg role="img" fill="#d6336c" width="25" height="25" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Instagram</title>
-              <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 
-              2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
-            </svg>
-          </a>
-          <a href="https://github.com/eastID-10" target="_blank"
-            class="bg-rose-100 p-1 rounded-full border border-rose-300 hover:ring hover:ring-rose-400 hover:bg-slate-100">
-            <svg role="img" fill="#d6336c" width="25" height="25" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>GitHub</title>
-              <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805
-               5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-            </svg>
+        <div id="split" class="tracking-widest px-5 gap-4 w-full text-left border-rose-300
+           lg:mt-36 lg:w-3/1 lg:text-5xl split text-3xl font-bold text-rose-500">
+          <h5 id=" " class="line">
+            <span class="underline">With</span>
+            <span class="underline">strong</span>
+            <span class="underline">foundation</span>
+            <span class="underline">In</span>
+            <span class="underline">Software</span>
+            <span class="underline">Engineering</span>
+            <span class="underline">Major</span>
+            <span class="underline">Committed</span>
+            <span class="underline">to</span>
+            <span class="underline">designing</span>
+            <span class="underline">unique,</span>
+            <span class="underline">Impactful</span>
+            <span class="underline">solutions</span>
+            <span class="underline">from</span>
+            <span class="underline">the</span>
+            <span class="underline">very</span>
+            <span class="underline">foundation.</span>
+          </h5>
 
-          </a>
-          <a href="https://www.linkedin.com/in/easti-damayanti-510913261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            class="bg-rose-100 p-1 rounded-full border border-rose-300 hover:ring hover:ring-rose-400 hover:bg-slate-100 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#d6336c" x="0px" y="0px" width="25" height="25"
-              viewBox="0 0 50 50">
-              <title>LinkedIn</title>
-              <path
-                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
-              </path>
-            </svg>
-
-          </a>
         </div>
       </div>
-    </div>
   </section>
+
   <!-- Hero Section End -->
 
   <!-- About Section Start -->
-  <section id="about" class="w-full mx-auto pt-12  pb-36  ">
-    <div class="bg-blur">
+  <section id="about" class="w-full mx-auto pt-4  pb-4  ">
+    <div class="bg-blur " data-aos="fade-down-right">
       <div class="flex ">
         <div class="w-full flex flex-col mx-2  px-4  items-center justify-center
-      mt-10 mb-10 lg:w-1/2 lg:mx-auto  py-24">
+      mt-10 mb-10 lg:w-1/2 lg:mx-auto  py-12">
           <h1 class="font-medium text-rose-500 text-lg   
         border-b-2 border-rose-500 px-4 py-1 mb-10 overflow-hidden lg:mb-5 lg:text-2xl">About Me🐱</h1>
-          <p class="font-bold text-xl text-rose-500 justify-center">Hola, I'm Easti Damayanti
-            <span class=" font-light text-sm text-slate-600 text-center ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum,
-              officiis consequuntur assumenda, tempore ad
-              cum porro nobis velit mollitia totam optio nam eveniet quas quisquam?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facilis.
+          <p class="font-bold text-xl text-rose-500 text-justify" data-aos="zoom-in-right">Hola, I'm Easti Damayanti
+            <span class=" font-light text-sm text-slate-600 text-center " data-aos="zoom-in-right"
+              data-aos-duration="1000" data-aos-delay="100">
+              an undergraduate student of Software Engineering at Politeknik Negeri Indramayu. I have a deep passion for
+              aesthetics and design, which fuels my excitement to create products that merge creativity and
+              functionality.I’m always eager to learn, grow, and explore new opportunities related to my passion for
+              design and innovation. While I may currently lack extensive professional experience, I’m highly motivated
+              and ready to contribute to exciting projects. If you’re looking for
+              someone with enthusiasm, creativity, and a willingness to grow, I’d be thrilled to collaborate with you!
             </span>
           </p>
         </div>
@@ -158,7 +180,7 @@
 
   <!-- Project Section Start -->
   <section id="project" class="">
-    <div class="bg-blur ">
+    <div class="bg-blur  " data-aos="fade-down-right">
       <div class="mx-auto ">
         <div class="w-full flex text-center items-center justify-center py-5  mx-auto ">
           <h1 class="font-medium text-rose-500 text-xl border-b-2 border-rose-500 inline-block px-4 py-1 mb-10
@@ -167,11 +189,13 @@
           </h1>
         </div>
 
-        <div class="w-full flex flex-wrap lg:flex-nowrap justify-center  px-4 mb-10 mx-auto ">
+        <div class="w-full flex flex-wrap lg:flex-nowrap justify-center mb-12">
           <!-- Project Web 1 Start -->
-          <div class="w-full mb-12 px-1 mx-4 rounded-xl py-2 lg:w-1/2  relative group">
+          <div class="w-full mb-12 px-1 mx-4 rounded-xl py-2 lg:w-1/2  relative group" data-aos="zoom-in-right"
+            data-aos-duration="1000" data-aos-delay="100">
             <h1 class="absolute -top-5 left-0 z-40 bg-rose-400 font-medium px-4 py-2
-           text-center text-white rounded-lg shadow-md hover:bg-transparent hover:text-rose-700">PetaniTech Website</h1>
+           text-center text-white rounded-lg shadow-md hover:bg-transparent hover:text-rose-700">PetaniTech Website
+            </h1>
 
             <!-- Image Container -->
             <div class="relative ">
@@ -199,7 +223,8 @@
           <!-- Project Web 1 End -->
 
           <!-- Project Mobile 2 Start -->
-          <div class="mb-12 px-1 mx-4 rounded-xl py-2 lg:w-1/2 relative group">
+          <div class="mb-12 px-1 mx-4 rounded-xl py-2 lg:w-1/2 relative group" data-aos="zoom-in-right"
+            data-aos-duration="1000" data-aos-delay="200">
             <h1 class="absolute -top-5 left-0 z-40 bg-rose-400 font-medium px-4 py-2
            text-center text-white rounded-lg shadow-md hover:bg-transparent hover:text-rose-700">PetaniTech Mobile</h1>
 
@@ -228,9 +253,11 @@
           <!-- Project Mobile 2 End -->
 
           <!-- Project Drafle 3 Start -->
-          <div class="mb-12 px-1 mx-4 rounded-xl py-2 lg:w-1/2 relative group">
+          <div class="mb-12 px-1 mx-4 rounded-xl py-2 lg:w-1/2 relative group" data-aos="zoom-in-right"
+            data-aos-duration="1000" data-aos-delay="300">
             <h1 class="absolute -top-5 left-0 z-40 bg-rose-400 font-medium px-4 py-2
-           text-center text-white rounded-lg shadow-md hover:bg-transparent hover:text-rose-700">PORTALGANK Website</h1>
+           text-center text-white rounded-lg shadow-md hover:bg-transparent hover:text-rose-700">PORTALGANK Website
+            </h1>
 
             <!-- Image Container -->
             <div class="relative overflow-hidden">
@@ -258,7 +285,7 @@
 
   <!--Showcase Section Start-->
   <section id="showcase" class="relative ">
-    <div class="bg-blur">
+    <div class="bg-blur " data-aos="fade-down-right">
       <div class="w-full flex text-center items-center justify-center py-5 mx-auto ">
         <h1 class="font-medium text-rose-500 text-xl border-b-2 border-rose-500 inline-block px-4 py-1 
       overflow-hidden lg:mb-5 lg:text-2xl">
@@ -295,7 +322,7 @@
 
   <!-- TechStack Section Start -->
   <Section id="stack">
-    <div class="bg-blur stack-container mt-10">
+    <div class="bg-blur stack-container mt-10" data-aos="fade-down-right">
       <div class="">
         <div class="w-full flex flex-col text-center items-center justify-center py-5 px-8 mx-auto ">
           <h1 class="font-medium text-rose-500 text-xl border-b-2 border-rose-500 inline-block px-4 py-1 
@@ -471,7 +498,7 @@
 
   <!-- Contact Section Start -->
   <section id="contact" class="w-full pt-16 pb-12  ">
-    <div class="bg-blur pb-16 py-12">
+    <div class="bg-blur pb-16 py-12" data-aos="fade-down-right">
       <div class="rounded-md  py-7">
         <div class="w-full mx-auto text-center mb-10  ">
           <h1 class="text-rose-600 text-xl lg:text-3xl font-medium">Let's keep in touch</h1>
@@ -523,7 +550,7 @@
 
 
   <!-- Script Start -->
- 
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- navigation js -->
   <script>
@@ -574,6 +601,32 @@
     }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+  <script>
+    // use a script tag or an external JS file
+    document.addEventListener("DOMContentLoaded", (event) => {
+      gsap.registerPlugin(TextPlugin, SplitText, CustomBounce)
+      // gsap code here!
+    });
+    // click to modify the underlined values
+
+    gsap.fromTo(
+      "#background",
+      { opacity: 0, scale: 1.1 },
+      { duration: 2, opacity: 1, scale: 1, ease: "power2.out" }
+    );
+    gsap.defaults({ ease: "none" });
+
+    const tl = gsap.timeline({ repeat: 3, repeatDelay: 1, yoyo: true });
+    tl.to("#author", { duration: 4, text: "Frontend Developer" })
+  </script>
   <!-- local -->
   <script src="assets/main.js"> </script>
 </body>
