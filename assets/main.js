@@ -13,4 +13,18 @@ function sendEmail() {
     alert("Please fill out all fields before sending.");
   }
 }
-  
+ 
+// preloader
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none"; // Hide the preloader
+});
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.classList.add("fade-out");
+
+  // Wait for the fade-out animation to finish before hiding the element
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500); // Match the transition duration
+});

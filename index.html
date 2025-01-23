@@ -25,6 +25,13 @@
 </head>
 
 <body>
+  <!-- Preloader Start -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Preloader End -->
+
   <!-- Header Start -->
   <!-- Navigation -->
   <nav id="navbar"
@@ -34,7 +41,7 @@
         <!-- Logo -->
         <div class="">
           <a href="#" class="text-lg font-bold text-slate-50">
-            <img src="assets/img/logoweb.png" class="w-12 z- ring-1 ring-rose-100 rounded-full" alt="">
+            <img src="assets/img/logoweb.png" class="w-12 z- ring-1 ring-rose-300 rounded-full" alt="">
           </a>
         </div>
 
@@ -80,9 +87,9 @@
               class="w-1/2 lg:w-24 mt-24 rounded-full bg-rose-500 border-2 border-rose-400 ring-2 ring-rose-200"
               alt="Avatar">
             <h1 id="" class="text-rose-600 text-center font-medium text-xl lg:text-4xl font-baloo">
-               Easti Damayanti
+              Easti Damayanti
             </h1>
-            <p  class="font-medium text-sm text-center  text-rose-600 mb-5 font-baloo">
+            <p class="font-medium text-sm text-center  text-rose-600 mb-5 font-baloo">
               A <span id="author" class="text-zinc-700"></span>
             </p>
           </div>
@@ -160,12 +167,13 @@
       mt-10 mb-10 lg:w-1/2 lg:mx-auto  py-12">
           <h1 class="font-medium text-rose-500 text-lg   
         border-b-2 border-rose-500 px-4 py-1 mb-10 overflow-hidden lg:mb-5 lg:text-2xl">About Me🐱</h1>
-          <p class="font-bold text-xl text-rose-500 text-justify" data-aos="zoom-in-right">Hola, I'm Easti Damayanti
-            <span class=" font-light text-sm text-slate-600 text-center " data-aos="zoom-in-right"
+          <p class="font-bold text-base  lg:text-xl text-rose-500 text-justify" data-aos="zoom-in-right">Hola, I'm Easti
+            Damayanti
+            <span class=" font-medium text-sm text-slate-600 text-center " data-aos="zoom-in-right"
               data-aos-duration="1000" data-aos-delay="100">
               an undergraduate student of Software Engineering at Politeknik Negeri Indramayu. I have a deep passion for
               aesthetics and design, which fuels my excitement to create products that merge creativity and
-              functionality.I’m always eager to learn, grow, and explore new opportunities related to my passion for
+              functionality. I’m always eager to learn, grow, and explore new opportunities related to my passion for
               design and innovation. While I may currently lack extensive professional experience, I’m highly motivated
               and ready to contribute to exciting projects. If you’re looking for
               someone with enthusiasm, creativity, and a willingness to grow, I’d be thrilled to collaborate with you!
@@ -622,10 +630,13 @@
       { opacity: 0, scale: 1.1 },
       { duration: 2, opacity: 1, scale: 1, ease: "power2.out" }
     );
-    gsap.defaults({ ease: "none" });
 
-    const tl = gsap.timeline({ repeat: 3, repeatDelay: 1, yoyo: true });
-    tl.to("#author", { duration: 4, text: "Frontend Developer" })
+    gsap.fromTo(
+      '#author', { repeat: 5, repeatDelay: 2, yoyo: true },
+      { duration: 5, text: "Frontend Developer" }
+    )
+    // 
+   
   </script>
   <!-- local -->
   <script src="assets/main.js"> </script>
