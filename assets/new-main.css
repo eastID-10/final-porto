@@ -1,5 +1,5 @@
  :root {
-     --cobalt: #1C3F9E;
+     --cobalt: #071d58;
      --cream: #F0EDE4;
      --ink: #0D1F5C;
      --accent: #E84B3A;
@@ -793,7 +793,7 @@
  }
 
  .submit-btn:hover {
-     background: var(--cobaltDark);
+     /* background: var(--cobaltDark); */
      transform: translateY(-2px);
  }
 
