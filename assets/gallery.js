@@ -14,7 +14,7 @@ const GALLERY_ITEMS = [
   { src: "assets/img2/petanitech.png", title: "PetaniTech Mobile", tag: "Mobile · Frontend . 2024", category: "developer" },
   { src: "assets/img2/flyer.png", title: "PetaniTech Website", tag: "Web · Full Stack . 2024", category: "developer" },
   { src: "assets/gallery/drafle.png", title: "Drafle Website", tag: "Web · Frontend . 2023", category: "developer" },
-  { src: "assets/img2/webtl.png", title: "AI Machine Translation Model", tag: "Web · Thesis . 2026", category: "developer" },
+  { src: "assets/gallery/dermayontl.png", title: "AI Machine Translation Model", tag: "Web · Thesis . 2026", category: "developer" },
   { src: "assets/img2/simwil.png", title: "SIMDES Laravel Migration", tag: "Web · Full Stack . 2025", category: "developer" },
   { src: "assets/gallery/ui-pocketify.png", title: "Pocketify App", tag: "UI/UX Design  . 2025", category: "developer" },
   { src: "assets/img2/portalgank.png", title: "PORTALGANK Website", tag: "UI/UX · Competition . 2024", category: "uiux" },
