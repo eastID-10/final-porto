@@ -42,6 +42,8 @@ const GALLERY_ITEMS = [
   { src: "assets/gallery/3.png", title: "Product Katalog Design", tag: "Graphic Design . 2024", category: "design" },
   { src: "assets/gallery/4.png", title: "Product Katalog Design", tag: "Graphic Design . 2024", category: "design" },
   { src: "assets/gallery/5.png", title: "Product Katalog Design", tag: "Graphic Design . 2024", category: "design" },
+  { src: "assets/gallery/wed-invt.png", title: "Wedding Invitations", tag: "Web · Design . 2025", category: "uiux" },
+
 ];
 
 (function () {
